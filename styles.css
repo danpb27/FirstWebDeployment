@@ -450,7 +450,7 @@ body {
   border-radius: 999px;
   background: var(--accent);
   position: absolute;
-  left: -1.9rem;
+  left: -1.1rem;
   top: 0.35rem;
   box-shadow: 0 0 0 3px rgba(224, 22, 43, 0.25);
 }
@@ -653,3 +653,4 @@ body {
     width: min(100% - 1.5rem, 100%);
   }
 }
+
