@@ -433,11 +433,22 @@ body {
 /* Timeline */
 
 .timeline {
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
-  margin-left: 0.9rem;
-  padding-left: 1.4rem;
+  position: relative;
+  margin-left: 0;
+  padding-left: 2rem;
   display: grid;
   gap: 1.8rem;
+}
+
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .timeline-item {
@@ -445,13 +456,14 @@ body {
 }
 
 .timeline-marker {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
   background: var(--accent);
   position: absolute;
-  left: -1.1rem;
+  left: 0.75rem;           /* same x as the line */
   top: 0.35rem;
+  transform: translateX(-50%);  /* centers the dot on the line */
   box-shadow: 0 0 0 3px rgba(224, 22, 43, 0.25);
 }
 
@@ -653,4 +665,5 @@ body {
     width: min(100% - 1.5rem, 100%);
   }
 }
+
 
