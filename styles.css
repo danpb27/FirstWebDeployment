@@ -599,31 +599,16 @@ body {
     order: -1;
   }
 
-  .projects-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .skills {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .contact-form {
-    padding: 1.3rem 1.2rem;
-  }
-
-  .form-row {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
+  /* 👇 important: make header-inner the positioning context */
+  .header-inner {
+    position: relative;
   }
 
   .nav {
     position: absolute;
-    inset-inline: 0;
-    top: 100%;
+    left: 0;
+    right: 0;
+    top: 100%;                  /* drop down below header */
     background: #050505;
     padding: 0.7rem 1rem 1rem;
     flex-direction: column;
@@ -633,6 +618,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.18s ease, transform 0.18s ease;
+    z-index: 5;
   }
 
   .nav.open {
@@ -644,6 +630,15 @@ body {
   .nav-toggle {
     display: inline-flex;
     flex-direction: column;
+    margin-left: auto;
+  }
+
+  .nav-toggle span {
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    margin: 4px 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
   .nav-toggle.active span:nth-child(1) {
@@ -664,6 +659,7 @@ body {
     width: min(100% - 1.5rem, 100%);
   }
 }
+
 
 
 
