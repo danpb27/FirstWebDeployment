@@ -1,120 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>American Drilling Company</title>
-        <link rel="shortcut icon" type="gif" href="images/favicon.gif">
-        <link rel="stylesheet" href="styles.css">
-        <script type="javascript" src="script.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header class="stickyTop">
-            <div class="header-container">
-                <h1>American Drilling Company</h1>
-                <nav>
-                    <div class="hamburger" id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="nav-menu" id="nav-menu">
-                        <li><a href="#">Home</a></li>
-                        <li><div></div></li>
-                        <li><a href="#">About</a></li>
-                        <li><div></div></li>
-                        <li><a href="#">Clients</a></li>
-                        <li><div></div></li>
-                        <li><a href="#">Services</a></li>
-                        <li><div></div></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        
-        <section class="hero">
-            <div class="bg bg1"></div>
-            <div class="bg bg2"></div>
-            <div class="bg bg3"></div>
-            <div class="hero-text">
-                <h1>Precision Machining Experts</h1>
-                <h2>"50 Years of Excellence!"</h2>
-                <a href="" class="btn">Request a Quote</a>
-                <a href="" class="btn">Learn More</a>
-            </div>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Pantoja – Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo">DP</a>
 
-        <h1 class="services-header">Our Services</h1>
-        <section class="services">
-            <div class="services-container">
-                <article>
-                    <h1>Gundrilling</h1>
-                    <h2>Accurate, Reliable, and Efficient Deep Hole Drilling Solutions</h2>
-                    <p>
-                        Gundrilling services offer unmatched precision for deep and 
-                        small-diameter holes, serving industries like aerospace, automotive, 
-                        medical, and oil & gas. We specialize in holes from [insert diameter 
-                        range] with exceptional straightness, accuracy, and surface finish. 
-                        Our advanced CNC gundrilling equipment ensures fast turnaround and 
-                        repeatable results.
-                    </p>
-                </article>
-                <article>
-                    <h1>Wire Hole Drilling</h1>
-                    <h2>Fine Hole Creation with Extreme Accuracy</h2>
-                    <p>
-                        Wire Hole Drilling process creates starter holes and precision 
-                        holes for Electrical Discharge Machining (EDM) and other intricate 
-                        applications. Capable of drilling small holes with tight tolerances 
-                        and clean edges, this service is ideal for high-value components 
-                        requiring detailed work without compromising structural integrity.
-                    </p>
-                </article>
-                <article>
-                    <h1>CNC Turning and Milling</h1>
-                    <h2>Precision Machining from Prototypes to Large Production Runs</h2>
-                    <p>
-                        CNC Turning and Milling services deliver high-quality machined 
-                        parts with tight tolerances and repeatability. Using state-of-the-art 
-                        CNC lathes and mills, we can handle materials ranging from aluminum 
-                        and steel to exotic alloys. From one-off prototypes to full-scale 
-                        production, we ensure speed, consistency, and superior surface 
-                        finishes.
-                    </p>
-                </article>
-                <article>
-                    <h1>Honing</h1>
-                    <h2>Optimize Part Performance with Precision Honing</h2>
-                    <p>
-                        Honing services refine the surface finish and geometric form of 
-                        holes for better performance and longer part life. We achieve 
-                        ultra-tight tolerances and optimal surface textures, ideal for 
-                        hydraulic components, engine parts, and medical devices. Trust us 
-                        to deliver the right fit and finish every time.
-                    </p>
-                </article>
-            </div>
-        </section>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span>
+      </button>
 
-        <section>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Software Engineer · CSUDH Grad</p>
+          <h1>Building secure, human-centered web experiences.</h1>
+          <p class="hero-subtitle">
+            I design and develop privacy-first apps, dashboards, and tools for fitness,
+            data, and creators. Focused on clean UX, strong architecture, and performance.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View projects</a>
+            <a href="#contact" class="btn btn-outline">Contact me</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-tag">Currently exploring</div>
+          <h2>Secure fitness platforms · Data visualizations</h2>
+          <ul>
+            <li>Multi-factor authentication & access control</li>
+            <li>Macro planning and training tools</li>
+            <li>GPU + performance visual dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>Some of the things I’ve built recently.</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fullstack">Full-stack</button>
+          <button class="filter-btn" data-filter="frontend">Front-end</button>
+          <button class="filter-btn" data-filter="tools">Tools</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card" data-category="fullstack">
+            <div class="project-tag">Full-stack · Security</div>
+            <h3>Secure Fitness Blogging Platform</h3>
             <p>
-                <a href="https://maps.app.goo.gl/6jHeBwcjUbBpLB456">
-                    Address: 560 Alaska Ave, Torrance, CA 90503
-                </a>
+              A privacy-first platform where users can log workouts, track progress,
+              and share posts with optional MFA-locked journals.
             </p>
-            <p>Phone: 310-973-4161</p>
-            <p>Email: Sales@AmericanDrill.com</p>
-        </section>
+            <ul class="project-meta">
+              <li>Custom auth with MFA</li>
+              <li>Role-based access control</li>
+              <li>Responsive dashboard UI</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank">Live demo</a>
+              <a href="#" target="_blank">GitHub</a>
+            </div>
+          </article>
 
-        <footer>
-            <p>© 2025 American Drilling Company. All rights reserved.</p>
-        </footer>
+          <article class="project-card" data-category="tools">
+            <div class="project-tag">CLI · Tooling</div>
+            <h3>Minecraft Modding Toolkit</h3>
+            <p>
+              A set of scripts to validate modpacks, check versions, and help configure
+              shaders and resource packs quickly.
+            </p>
+            <ul class="project-meta">
+              <li>Config validation</li>
+              <li>Pack size reporting</li>
+              <li>Version checks</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank">GitHub</a>
+            </div>
+          </article>
 
-        <script src="script.js"></script>
+          <article class="project-card" data-category="fullstack">
+            <div class="project-tag">Full-stack · Product</div>
+            <h3>Nutrition Macro Planner</h3>
+            <p>
+              A web app to plan weekly meals, set macro targets, and generate
+              grocery lists tailored to training days.
+            </p>
+            <ul class="project-meta">
+              <li>Macro calculations</li>
+              <li>Exportable meal plans</li>
+              <li>Mobile-first layout</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank">Live demo</a>
+              <a href="#" target="_blank">GitHub</a>
+            </div>
+          </article>
 
-    </body>
+          <article class="project-card" data-category="frontend">
+            <div class="project-tag">Front-end · Data</div>
+            <h3>GPU Bench Visualizer</h3>
+            <p>
+              A visual comparison tool for RTX GPUs using charts to show FPS, VRAM,
+              and temperature across different presets.
+            </p>
+            <ul class="project-meta">
+              <li>Interactive charts</li>
+              <li>Filterable data</li>
+              <li>Dark theme UI</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank">Live demo</a>
+              <a href="#" target="_blank">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+      <div class="container about-grid">
+        <div>
+          <h2>About</h2>
+          <p class="section-subtitle">
+            A bit about who I am and how I work.
+          </p>
+        </div>
+        <div>
+          <p>
+            I’m Daniel, a computer science graduate who enjoys building tools at the
+            intersection of fitness, data, and user experience. I care about clean
+            interfaces, security, and making things genuinely useful.
+          </p>
+          <p>
+            Outside of code, I’m usually in the gym, tweaking Minecraft modpacks,
+            or experimenting with new ways to track health and performance.
+          </p>
+
+          <div class="skills">
+            <div class="skills-group">
+              <h3>Languages</h3>
+              <span>JavaScript</span>
+              <span>TypeScript</span>
+              <span>Python</span>
+              <span>SQL</span>
+            </div>
+            <div class="skills-group">
+              <h3>Web</h3>
+              <span>HTML5</span>
+              <span>CSS3 / Flexbox / Grid</span>
+              <span>REST APIs</span>
+            </div>
+            <div class="skills-group">
+              <h3>Focus</h3>
+              <span>Security-minded design</span>
+              <span>Performance & UX</span>
+              <span>Data visualization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <p>What I’ve been working on recently.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Software Engineer (Freelance)</h3>
+              <p class="timeline-meta">2024 — Present · Remote</p>
+              <ul>
+                <li>Built secure authentication flows and dashboards for small projects.</li>
+                <li>Helped define simple, maintainable front-end architectures.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>B.S. in Computer Science</h3>
+              <p class="timeline-meta">CSUDH · 2022 — 2024</p>
+              <ul>
+                <li>Coursework in OS, databases, software engineering, and security.</li>
+                <li>Built multiple class projects around real-world use cases.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-grid">
+        <div>
+          <h2>Let’s build something</h2>
+          <p class="section-subtitle">
+            Reach out if you want to collaborate, need help on a project, or just
+            want to talk tech and training.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:you@example.com">you@example.com</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" type="email" required />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" />
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary full-width">
+            Send message
+          </button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Daniel Pantoja. All rights reserved.</p>
+      <p class="footer-note">Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
