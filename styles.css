@@ -433,29 +433,36 @@ body {
 /* Timeline */
 
 .timeline {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  margin-left: 1.2rem;  /* moves the whole line + content right */
   display: grid;
   gap: 1.8rem;
 }
 
-/* each item draws its own piece of the vertical line */
-.timeline-item {
-  position: relative;
-  padding-left: 2.4rem; /* space for line + dot */
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
+/* single continuous vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;                  /* x-position of the line */
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.12);
 }
 
-/* the red dot sits exactly on that border-left */
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;       /* space for dot + line */
+}
+
 .timeline-marker {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: var(--accent);
   position: absolute;
-  left: 0;              /* same x as border-left */
-  top: 0.45rem;         /* adjust vertically as needed */
-  transform: translateX(-50%);  /* center dot on the line */
+  left: -6px;               /* half the width → centers on the line at x=0 */
+  top: 0.45rem;             /* vertical offset from top of item */
   box-shadow: 0 0 0 3px rgba(224, 22, 43, 0.25);
 }
 
@@ -657,6 +664,7 @@ body {
     width: min(100% - 1.5rem, 100%);
   }
 }
+
 
 
 
