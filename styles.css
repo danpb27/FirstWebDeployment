@@ -1,0 +1,294 @@
+:root {
+    --backgroundColor: #ffffff;
+    --headingColor: #0a1f44;
+    --textColor: #7b8b9a;
+    --accentColor: #f05a28;
+
+    --headingFont: "Bebas Neue", sans-serif;
+    --bodyFont: "Roboto", sans-serif;
+}
+body {
+    color: var(--backgroundColor);
+    font-family: var(--headingFont);
+    margin: 0px;
+    font-weight: normal;
+    font-style: normal;
+    width: 100%;
+}
+.hero-text {
+    text-align: center;
+    justify-items: center;
+    align-content: center;
+    min-height: 600px;
+    text-shadow: 2px 2px var(--backgroundColor), -2px 2px var(--backgroundColor), 2px -2px var(--backgroundColor), -2px -2px var(--backgroundColor);
+    position: relative;
+    z-index: 1;
+}
+.hero-text h1 {
+    width: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100px;
+    font-weight: bolder;
+    color: var(--headingColor);
+}
+.hero-text h2 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    color: var(--textColor);
+    font-weight: lighter;
+}
+.hero-text .btn {
+    background: var(--accentColor);
+    color: var(--backgroundColor);
+    font-family: var(--bodyFont);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-shadow: none;
+}
+header {
+    background-color: var(--backgroundColor);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px;
+    color: var(--accentColor);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-container h1 {
+    font-size: 35px;
+}
+nav {
+    position: relative;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+
+}
+  
+.nav-menu li {
+    margin-left: 20px;
+}
+  
+.nav-menu li a {
+    color: var(--accentColor);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Hamburger Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+/* Footer Styles */
+footer {
+    background-color: var(--headingColor);
+    padding: 10px;
+    text-align: center;
+    color: var(--backgroundColor);
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+.stickyTop {
+    position: sticky;
+    top: 0;
+}
+.services {
+    align-content: center;
+}
+.services-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    justify-content: space-around;
+}
+.services-container article h1 {
+    color: var(--accentColor);
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+.services-container article h2 {
+    color: var(--headingColor);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.services-container article p {
+    color: var(--textColor);
+    font-size: 18px;
+    margin: 0px;
+}
+article {
+    max-width: 30%;
+}
+article h1, h2, p, img {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.services-header {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+    background-color: var(--textColor);
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 2px 2px var(--backgroundColor);
+}
+h1 {
+    font-family: var(--headingFont);
+    color: var(--headingColor);
+    font-size: 40px;
+}
+h2 {
+    font-family: var(--headingFont);
+    color: var(--headingColor);
+}
+p {
+    font-family: var(--bodyFont);
+    color: var(--backgroundColor);
+}
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--backgroundColor);
+    text-align: center;
+}
+.bg {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fade 6s infinite ease-in-out;
+}
+.bg1 {
+    background-image: url("images/bg6.jpg");
+    /* start fully visible */
+    animation-delay: 0s;
+}
+.bg2 {
+    background-image: url("images/bg5.jpg");
+    /* start invisible, then fade in halfway through */
+    animation-delay: 2s;
+}
+.bg3 {
+    background-image: url("images/bg3.jpg");
+    /* start invisible, then fade in halfway through */
+    animation-delay: 4s;
+}
+@keyframes fade {
+    0%, 15%   { opacity: 1; }
+    40%, 80% { opacity: 0; }
+  }
+/* =========================== Responsive Navbar for Phone Devices */
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-menu {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        display: none;
+        padding: 10px 0;
+        border-radius: 4px;
+    }
+    .nav-menu.active {
+        display: flex;
+        background-color: var(--headingColor);
+    }
+    .nav-menu li {
+        margin: 10px 0px;
+        text-align: center;
+        justify-items: center;
+    }
+    .nav-menu li a {
+        color: var(--backgroundColor);
+        text-decoration: none;
+    }
+    .hamburger span {
+        background-color: var(--accentColor);
+    }
+    
+    .nav-menu li div {
+        height: 1px;
+        width: 60%;
+        background: white;
+    }
+    /* ===================================================================== */
+    
+}
+/* =========================== Responsive Navbar for Tablet Devices */
+@media (min-width: 600px) and (max-width: 768px) {
+    /* TO-DO: Complete the media style/size for this screen measurement */
+
+}
+/* =========================== Responsive Navbar for Laptop Devices */
+@media (min-width: 768px) and (max-width: 992px) {
+    /* TO-DO: Complete the media style/size for this screen measurement */
+
+}
+/* =========================== Responsive Navbar for Large Screen Devices */
+@media (min-width: 992px) {
+    /* TO-DO: Complete the media style/size for this screen measurement */
+
+}
+/* ================================================== My custom Fonts */
+@font-face {
+    font-family: customfont1;
+    src: url(fonts/vhs-gothic.ttf);
+}
+@font-face {
+    font-family: customfont2;
+    src: url(fonts/VCR_OSD_MONO_1.001.ttf);
+}
+@font-face {
+    font-family: customfont3;
+    src: url(fonts/Crang.ttf);
+}
+@font-face {
+    font-family: customfont4;
+    src: url(fonts/doomed.ttf);
+}
+@font-face {
+    font-family: customfont5;
+    src: url(fonts/BMjapan.TTF);
+}
+@font-face {
+    font-family: customfont6;
+    src: url(fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: customfont7;
+    src: url(fonts/Poppins-Regular.ttf);
+}
