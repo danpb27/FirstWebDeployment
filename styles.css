@@ -434,8 +434,8 @@ body {
 
 .timeline {
   position: relative;
-  margin-left: 0;
-  padding-left: 2rem;
+  margin: 0;
+  padding-left: 2.5rem;
   display: grid;
   gap: 1.8rem;
 }
@@ -444,7 +444,7 @@ body {
 .timeline::before {
   content: "";
   position: absolute;
-  left: 0.75rem;
+  left: 1rem; /* x-position of the line */
   top: 0;
   bottom: 0;
   width: 1px;
@@ -461,9 +461,9 @@ body {
   border-radius: 50%;
   background: var(--accent);
   position: absolute;
-  left: 0.75rem;           /* same x as the line */
-  top: 0.35rem;
-  transform: translateX(-50%);  /* centers the dot on the line */
+  left: 1rem;           /* same as the line */
+  top: 0.45rem;         /* vertical offset from top of item */
+  transform: translateX(-50%); /* centers dot on the line */
   box-shadow: 0 0 0 3px rgba(224, 22, 43, 0.25);
 }
 
@@ -665,5 +665,6 @@ body {
     width: min(100% - 1.5rem, 100%);
   }
 }
+
 
 
